@@ -1,3 +1,4 @@
+// server.js (main server file)
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -17,7 +18,6 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 // Routes
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
-
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
 
